@@ -1,0 +1,16 @@
+# Bir sınıf tanımlıyoruz
+class Kisi:
+    def __init__(self, isim, yas, meslek):
+        self.isim = isim    # Kişinin ismi
+        self.yas = yas      # Kişinin yaşı
+        self.meslek = meslek  # Kişinin mesleği
+    
+    # Kişinin bilgilerini ekrana yazdırmak için
+    def bilgileri_goster(self):
+        print(f"İsim: {self.isim}, Yaş: {self.yas}, Meslek: {self.meslek}")
+
+# Kisi sınıfından bir nesne 
+kisi1 = Kisi("Ali", 30, "Mühendis")
+
+# Nesnenin bilgilerini gösteremesi için
+kisi1.bilgileri_goster()
