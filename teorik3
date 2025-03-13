@@ -1,0 +1,11 @@
+#init yeni bir nesne oluşturulurken başlangıç değeri atanması içindir
+
+class Araba:
+    # __init__ metodu sınıfın yapıcı metodudur
+    def __init__(self, marka, model, yil):
+        self.marka = marka  # Nesneye ait marka özelliği
+        self.model = model  # Nesneye ait model özelliği
+        self.yil = yil      # Nesneye ait yıl özelliği
+    
+    def bilgileri_goster(self):
+        print(f"Araba Bilgileri: Marka = {self.marka}, Model = {self.model}, Y
