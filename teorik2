@@ -1,0 +1,35 @@
+class Ogrenci:
+    # Öğrencinin ismi ve not ortalamasını ayarlıyoruz
+    def __init__(self, isim, not_ortalamasi):
+        self.isim = isim  # İsim herkesin görebileceği bir özellik
+        self.__not_ortalamasi = not_ortalamasi  # Not ortalaması gizli (private)
+
+    # Notu ekrana yazdıran fonksiyon
+    def notu_goster(self):
+        print(f"{self.isim}'in not ortalaması: {self.__not_ortalamasi}")
+
+    # Notu değiştiren fonksiyon
+    def notu_guncelle(self, yeni_not):
+        if 0 <= yeni_not <= 100:  # Geçerli bir not mu kontrol ediyoruz
+            self.__not_ortalamasi = yeni_not  # Yeni notu kaydediyoruz
+            print(f"Not ortalaması güncellendi: {self.__not_ortalamasi}")
+        else:
+            print("Geçersiz not! Not 0 ile 100 arasında olmalı.")  # Hata mesajı
+
+# Öğrenci oluşturuluyor
+ogrenci1 = Ogrenci("Ayşe", 85)
+
+# İsim doğrudan erişilebilir
+print(ogrenci1.isim)  # Çıktı: Ayşe
+
+# Not ortalamasına doğrudan erişilemez (private)
+# print(ogrenci1.__not_ortalamasi)  # Hata verir
+
+# Notu gösteren fonksiyonu kullanıyoruz
+ogrenci1.notu_goster()  # Çıktı: Ayşe'in not ortalaması: 85
+
+# Notu güncelliyoruz
+ogrenci1.notu_guncelle(90)  # Çıktı: Not ortalaması güncellendi: 90
+
+# Geçersiz bir not girmeye çalışıyoruz
+ogrenci1.notu_guncelle(105)  # Çıktı: Geçersiz not! Not 0 ile 100 arasında olmalı.
