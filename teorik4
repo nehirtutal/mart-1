@@ -1,0 +1,25 @@
+# Üst sınıf (Parent class)
+class Hayvan:
+    def __init__(self, isim):
+        self.isim = isim
+    
+    def ses_cikar(self):
+        print(f"{self.isim} bir ses çıkarıyor!")
+
+# Alt sınıf (Child class)
+class Kedi(Hayvan):
+    def ses_cikar(self):
+        print(f"{self.isim} miyavlıyor!")
+
+# Alt sınıf (Child class)
+class Kopek(Hayvan):
+    def ses_cikar(self):
+        print(f"{self.isim} havlıyor!")
+
+# Nesneler oluşturuluyor
+kedi = Kedi("Karabas")
+kopek = Kopek("Bobi")
+
+# Alt sınıfların metotları çağrılıyor
+kedi.ses_cikar()  # Karabas miyavlıyor!
+kopek.ses_cikar()  # Bobi havlıyor!
