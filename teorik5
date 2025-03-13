@@ -1,0 +1,24 @@
+# Üst sınıf (Parent class)
+class Hayvan:
+    def ses_cikar(self):
+        print("Hayvan bir ses çıkarıyor!")
+
+# Alt sınıf (Child class) - Kedi sınıfı
+class Kedi(Hayvan):
+    def ses_cikar(self):
+        print("Kedi miyavlıyor!")
+
+# Alt sınıf (Child class) - Kopek sınıfı
+class Kopek(Hayvan):
+    def ses_cikar(self):
+        print("Köpek havlıyor!")
+
+# Nesneler oluşturuluyor
+hayvan = Hayvan()
+kedi = Kedi()
+kopek = Kopek()
+
+# Aynı metot, farklı sınıflarda farklı şekilde çalışır
+hayvan.ses_cikar()  # Çıktı: Hayvan bir ses çıkarıyor!
+kedi.ses_cikar()    # Çıktı: Kedi miyavlıyor!
+kopek.ses_cikar()   # Çıktı: Köpek havlıyor!
